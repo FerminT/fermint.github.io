@@ -1,0 +1,53 @@
+<span class="anchor" id="OTGF"></span>
+<div class="paper">
+    <p class="title"><b>Dataset Dynamics via Gradient Flows in Probability Space</b></p>
+    <p><b>David Alvarez-Melis</b>, Nicolò Fusi</p>
+    <p><i>ICML'21: International Conference on Machine Learning. 2021.</i></p>
+    
+    <div class="paper-buttons">
+            <a class="button" href="/assets/publications/2021_otgf/ICML2021_OTGF.pdf" target="_blank">pdf</a>
+        
+            <a class="button" href="https://arxiv.org/abs/2010.12760" target="_blank">arxiv</a>
+        
+            <a class="button" href="/assets/publications/2021_otgf/ICML2021_OTGF_poster.pdf" target="_blank">poster</a>
+        
+            <a class="button" href="javascript:unhide('talk_ml_OTGF');">talk</a>
+        
+            <a class="button" href="https://github.com/microsoft/otdd" target="_blank">code</a>
+        
+            <a class="button" href="javascript:unhide('bib_ml_OTGF');">bib</a>
+        
+    </div>
+
+    <!-- Additional hidden containers that should appear after buttons -->
+        <!-- New: Slides Live Embedded Approach -->
+        <div id="talk_ml_OTGF" class="hidden"></div>
+        <script src='https://slideslive.com/embed_presentation.js'></script>
+        <script>
+            embed = new SlidesLiveEmbed("talk_ml_OTGF", {
+                presentationId: 38959168,
+                autoPlay: false, // change to true to autoplay the embedded presentation
+                verticalEnabled: true
+            });
+        </script>
+    
+    <div id="bib_ml_OTGF" class="hidden">
+        <pre> 
+            @InProceedings{alvarez-melis2021dataset,
+            title = 	 {Dataset Dynamics via Gradient Flows in Probability Space},
+            author =       {Alvarez-Melis, David and Fusi, Nicol\`o},
+            booktitle = 	 {Proceedings of the 38th International Conference on Machine Learning},
+            pages = 	 {219--230},
+            year = 	 {2021},
+            editor = 	 {Meila, Marina and Zhang, Tong},
+            volume = 	 {139},
+            series = 	 {Proceedings of Machine Learning Research},
+            month = 	 {18--24 Jul},
+            publisher =    {PMLR},
+            pdf = 	 {http://proceedings.mlr.press/v139/alvarez-melis21a/alvarez-melis21a.pdf},
+            url = 	 {https://proceedings.mlr.press/v139/alvarez-melis21a.html},
+            abstract = 	 {Various machine learning tasks, from generative modeling to domain adaptation, revolve around the concept of dataset transformation and manipulation. While various methods exist for transforming unlabeled datasets, principled methods to do so for labeled (e.g., classification) datasets are missing. In this work, we propose a novel framework for dataset transformation, which we cast as optimization over data-generating joint probability distributions. We approach this class of problems through Wasserstein gradient flows in probability space, and derive practical and efficient particle-based methods for a flexible but well-behaved class of objective functions. Through various experiments, we show that this framework can be used to impose constraints on classification datasets, adapt them for transfer learning, or to re-purpose fixed or black-box models to classify {—}with high accuracy{—} previously unseen datasets.}
+            }
+        </pre>
+    </div>
+</div>

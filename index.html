@@ -191,7 +191,7 @@ function includeHTML() {
 -->
 
 <!-- ========== PROJECTS ========== -->
-<!-- Had to include here the section tabs so they'd get parsed -->
+<!-- Had to include the section tabs here so they'd get parsed -->
 <span class="anchor" id="projects"></span>
 <div class="docs-section">
    <h4>Projects</h4>
@@ -213,8 +213,24 @@ function includeHTML() {
 
 <!-- ========== PUBLICATIONS ========== -->
 <span class="anchor" id="publications"></span>
-<div include-html="sections/publications.html"></div>
-
+<div class="docs-section">
+   <h4>Publications</h4>
+ 
+   <!-- <p>Most recent publications on <a href="https://scholar.google.com/citations?user=XsxZrYYAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>.</p> -->
+ 
+   <ul class="tab-nav">
+       <li><div class="button active" data-ref="#papers" font-size: 10px>Conference and Journals</div></li>
+       <li><div class="button" data-ref="#workshops" font-size: 10px>Refereed Workshops</div></li>
+       <li><div class="button" data-ref="#posters" font-size: 10px>Talks and Posters</div></li>
+       <li><div class="button" data-ref="#publications-all" font-size: 10px>All</div></li>
+   </ul>
+   <div class="tab-content">
+      <div class="tab-pane active" id="papers">
+         <div include-html="../publications/hhot.html"></div>
+         <div include-html="../publications/otgf.html"></div>
+      </div>
+   </div>
+</div>
 
 <!-- ========== TEACHING ========== -->
 <span class="anchor" id="teaching"></span>
