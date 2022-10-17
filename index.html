@@ -229,9 +229,11 @@ function includeHTML() {
    </ul>
    <div class="tab-content">
       <div class="tab-pane active" id="papers">
-         <div include-html="../publications/hhot.html"></div>
-         <!-- <script>include('publications/otgf.html', document.currentScript);</script> -->
-         <div include-html="../publications/otgf.html"></div>
+         <!-- <div include-html="../publications/hhot.html"></div> -->
+         <script>
+            include('publications/hhot.html', document.currentScript);
+            include('publications/otgf.html', document.currentScript);
+          </script>
       </div>
    </div>
 </div>
