@@ -77,7 +77,7 @@ function req(fileName) {
             }
         }
 
-        req.open("GET", fileName, true)
+        req.open("GET", fileName, false)
         req.send()
     })
 }
