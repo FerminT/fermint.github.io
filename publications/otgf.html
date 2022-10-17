@@ -11,7 +11,7 @@
         
             <a class="button" href="/assets/publications/2021_otgf/ICML2021_OTGF_poster.pdf" target="_blank">poster</a>
         
-            <a class="button" href="javascript:unhide('talk_ml_OTGF');slidesembed();" id="otgf_talk_btn">talk</a>
+            <a class="button" href="javascript:unhide('talk_ml_OTGF');" id="otgf_talk_btn">talk</a>
         
             <a class="button" href="https://github.com/microsoft/otdd" target="_blank">code</a>
         
@@ -22,16 +22,19 @@
     <!-- Additional hidden containers that should appear after buttons -->
         <!-- New: Slides Live Embedded Approach -->
         <div id="talk_ml_OTGF" class="hidden"></div>
-        <!-- <script src='https://slideslive.com/embed_presentation.js'></script> -->
+        <!-- <script src='https://slideslive.com/embed_presentation.js'></script> 
         <script>
             function slidesembed(){
-            embed = new SlidesLiveEmbed("talk_ml_OTGF", {
-                presentationId: 38959168,
-                autoPlay: false, // change to true to autoplay the embedded presentation
-                verticalEnabled: true
-            });
-        }
-        </script>
+                if (typeof embed === "undefined"){
+                    embed = new SlidesLiveEmbed("talk_ml_OTGF", {
+                        presentationId: 38959168,
+                        autoPlay: false, // change to true to autoplay the embedded presentation
+                        verticalEnabled: true
+                    });
+                    return embed;
+                }
+            }
+        </script> -->
     
     <div id="bib_ml_OTGF" class="hidden">
         <pre> 
