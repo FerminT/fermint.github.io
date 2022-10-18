@@ -105,7 +105,8 @@ h4 {
     background: #fff;
     z-index: 99;
     border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee; }
+    /* border-bottom: 1px solid #eee; */
+  }
   .navbar-spacer {
     display: none; }
   .navbar > .container {
