@@ -1,1 +1,334 @@
-Work in progress
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Fermin Travi | Home</title>
+    <meta name="description" content="Homepage of Fermin Travi">
+    <meta name="author" content="Fermin Travi">
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href=/libs/external/skeleton/normalize.css>
+    <link rel="stylesheet" href=/libs/external/skeleton/skeleton.css>
+    <link rel="stylesheet" href=/libs/custom/my_css.css>
+
+    <!-- JQuery
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src=/libs/external/jquery-3.1.1.min.js></script>
+
+    <!-- Font-Awesome
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href=/libs/external/font-awesome-4.7.0/css/font-awesome.min.css>
+
+    <!-- Academic-Icons
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href=/libs/external/academicons-1.8.6/css/academicons.min.css>
+
+
+    <!-- Skeleton tabs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href=/libs/external/skeleton_tabs/skeleton-tabs.css>
+    <script src=/libs/external/skeleton_tabs/skeleton-tabs.js></script>
+
+    <!-- Timeline
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href=/libs/external/timeline.css>
+
+    <!-- Scripts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!--<link rel="stylesheet" href=/libs/external/github-prettify-theme.css>-->
+    <script src=/libs/custom/my_js.js></script>
+    <script src=/libs/custom/includes.js></script>
+    <script src='https://slideslive.com/embed_presentation.js'></script>
+
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href=/libs/icon.png>
+    <link rel="shortcut icon" type="image/png" href=/libs/icon.png>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YC045KDRKQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-YC045KDRKQ');
+    </script>
+
+</head>
+<body>
+
+<!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container">
+
+  <section class="header">
+    <div class="row">
+      <div class="three columns">
+        <a href="/"><img title="" class="u-max-full-width" src='/assets/profile-pics/Profile_pic_2021_Sq.jpg'></a>
+      </div>
+      <div class="nine columns main-description">
+          <h1>Fermin Travi</h1>
+          <p>PhD student, University of Buenos Aires</p>
+          <p>Applied Artificial Intelligence Lab, Computer Science Institute</p>
+          <p>ftravi[AT]dc.uba.ar</p>
+          <p>
+            <!--
+            <span onclick="window.open('https://twitter.com/FerminTravi')" style="cursor: pointer">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </span>
+            -->
+
+            <span onclick="window.open('https://www.linkedin.com/in/fermintravi/')" style="cursor: pointer">
+              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </span>
+
+            <span onclick="window.open('https://github.com/fermint')" style="cursor: pointer">
+              <i class="fa fa-github" aria-hidden="true"></i>
+            </span>
+
+            <!--
+            <span onclick="window.open('https://scholar.google.com/citations?user=xxx=en')" style="cursor: pointer">
+              <i class="ai ai-google-scholar ai-lg" aria-hidden="true"></i>
+            </span>
+            -->
+          </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="navbar-spacer"></div>
+    <nav class="navbar">
+        <div class="container">
+          <ul class="navbar-list">
+              <li class="navbar-item"><a class="navbar-link" href=/index.html#about>About</a></li>
+              <!-- <li class="navbar-item"><a class="navbar-link" href=/index.html#news>News</a></li> -->
+              <li class="navbar-item"><a class="navbar-link" href=/index.html#projects>Projects</a></li>
+              <li class="navbar-item"><a class="navbar-link" href=/index.html#publications>Publications</a></li>
+              <li class="navbar-item"><a class="navbar-link" href=/index.html#teaching>Teaching</a></li>
+          </ul>
+        </div>
+    </nav>
+
+  <script>
+  function unhide(divID) {
+    console.log(divID)
+    var item = document.getElementById(divID);
+    if (item){
+      item.className=(item.className=='hidden')?'unhidden':'hidden';
+    }
+  }
+  </script>
+
+  <!-- ========== ABOUT ========== -->
+  <div class="docs-section">
+  <span class="anchor" id="about"></span>
+  <script>include("sections/about.html", document.currentScript);</script>
+  </div>
+
+  <!-- ========== NEWS ========== -->
+  <!-- DMelis: had to add empty anchor to solve the problem of fixed header
+      hiding part of paper
+  -->
+  <!-- <span class="anchor" id="news"></span>
+  <script>include("sections/news.html", document.currentScript);</script>
+  -->
+
+  <!-- ========== PROJECTS ========== -->
+  <!-- Had to include the section tabs here so they'd get parsed -->
+  <span class="anchor" id="projects"></span>
+  <div class="docs-section">
+    <h4>Projects</h4>
+
+    <ul class="tab-nav">
+        <li><div class="button active" data-ref="#projects-selected">All</div></li>
+        <!-- <li><div class="button" data-ref="#projects-all">All</div></li> -->
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="projects-selected">
+            <script>include("sections/projects_selected.html", document.currentScript);</script>
+        </div>
+        <!-- <div class="tab-pane" id="projects-all">
+          <script>include("sections/projects_all.html", document.currentScript);</script>
+        </div> -->
+      </div>   
+  </div>
+
+  <!-- ========== PUBLICATIONS ========== -->
+  <span class="anchor" id="publications"></span>
+  <div class="docs-section">
+    <h4>Publications</h4>
+  
+    <ul class="tab-nav">
+        <li><div class="button active" data-ref="#papers" font-size: 10px>Conferences and Journals</div></li>
+        <li><div class="button" data-ref="#workshops" font-size: 10px>Refereed Workshops</div></li>
+        <li><div class="button" data-ref="#posters" font-size: 10px>Talks and Posters</div></li>
+        <!-- <li><div class="button" data-ref="#publications-all" font-size: 10px>All</div></li> -->
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="papers">
+          <script>
+              include('publications/hhot.html', document.currentScript);
+              include('publications/otgf.html', document.currentScript);
+            </script>
+        </div>
+    </div>
+  </div>
+
+  <!-- ========== TEACHING ========== -->
+  <span class="anchor" id="teaching"></span>
+
+
+  <!-- ========== RESUME ========== -->
+  <!-- <span class="anchor" id="resume"></span>
+  <div class="docs-section">
+    <h4>Vit&#230;</h4>
+
+    <p>Full CV in <a href=/assets/cv/cv.pdf target="_blank">PDF</a> (or a shorter <a href=/assets/cv/resume.pdf target="_blank">Resumé</a>).</p>
+
+    <ul class="timeline">
+      
+      <li>
+        
+        <div class="direction-l">
+        
+          <div class="flag-wrapper">
+            <span class="flag">Microsoft Research, New England</span>
+            <span class="time-wrapper"><span class="time">2021 -- now</span></span>
+          </div>
+          <div class="desc"><b>Senior Researcher</b> <br/>  <br/> </div>
+        </div>
+      </li>
+      
+      <li>
+        
+        <div class="direction-l">
+        
+          <div class="flag-wrapper">
+            <span class="flag">Microsoft Research, New England</span>
+            <span class="time-wrapper"><span class="time">2019 -- 2021</span></span>
+          </div>
+          <div class="desc"><b>Postdoctoral Researcher</b> <br/>  <br/> </div>
+        </div>
+      </li>
+      
+      <li>
+        
+        <div class="direction-r">
+        
+          <div class="flag-wrapper">
+            <span class="flag">MIT CSAIL</span>
+            <span class="time-wrapper"><span class="time">2014 - 2019</span></span>
+          </div>
+          <div class="desc"><b>Ph.D. in Computer Science</b> <br/> Minor: Mathematical Optimization <br/> Thesis Advisor: Tommi Jaakkola</div>
+        </div>
+      </li>
+      
+      <li>
+        
+        <div class="direction-l">
+        
+          <div class="flag-wrapper">
+            <span class="flag">Microsoft Research, NYC</span>
+            <span class="time-wrapper"><span class="time">Summer 2018</span></span>
+          </div>
+          <div class="desc"><b>Research Intern</b> <br/> Mentors: H. Wallach, J.W. Vaughan, H. Daume III <br/> </div>
+        </div>
+      </li>
+      
+      <li>
+        
+        <div class="direction-l">
+        
+          <div class="flag-wrapper">
+            <span class="flag">Microsoft Research, Redmond</span>
+            <span class="time-wrapper"><span class="time">Summer 2016</span></span>
+          </div>
+          <div class="desc"><b>Research Intern</b> <br/> Mentors: S. Yih, M.W. Chang, K. Toutanova, C. Meek <br/> </div>
+        </div>
+      </li>
+      
+      <li>
+        
+        <div class="direction-l">
+        
+          <div class="flag-wrapper">
+            <span class="flag">IBM Research</span>
+            <span class="time-wrapper"><span class="time">2013 - 2014</span></span>
+          </div>
+          <div class="desc"><b>Supplemental Researcher</b> <br/> Speech Recognition Group <br/> </div>
+        </div>
+      </li>
+      
+      <li>
+        
+        <div class="direction-r">
+        
+          <div class="flag-wrapper">
+            <span class="flag">Courant Institute, NYU</span>
+            <span class="time-wrapper"><span class="time">2011 - 2013</span></span>
+          </div>
+          <div class="desc"><b>MS in Mathematics</b> <br/> Thesis Advisor: Mehryar Mohri <br/> </div>
+        </div>
+      </li>
+      
+      <li>
+        
+        <div class="direction-r">
+        
+          <div class="flag-wrapper">
+            <span class="flag">ITAM</span>
+            <span class="time-wrapper"><span class="time">2006 - 2011</span></span>
+          </div>
+          <div class="desc"><b>BSc in Applied Mathematics</b> <br/> Thesis Advisor: Carlos Bosch <br/> </div>
+        </div>
+      </li>
+      
+    </ul>
+  </div> -->
+
+  <div class="docs-section">
+    <h4>Website design</h4>
+    <p>The design of this website corresponds entirely to the template by <a href="http://web.media.mit.edu/~msaveski/">Martin Saveski</a>, with the neat modifications made by <a href="https://dmelis.github.io/">David Alvarez-Melis</a>.
+    </p>
+    <p>
+  </div>
+
+
+  <div class="footer">
+    <div class="row">
+      <div class="four columns">
+        Fermin Travi
+      </div>
+      <div class="four columns">  &nbsp;&nbsp; </div>
+      <div class="four columns">
+        <!-- <span onclick="window.open('https://twitter.com/FerminTravi')" style="cursor: pointer">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </span> -->
+        <span onclick="window.open('https://www.linkedin.com/in/fermintravi')" style="cursor: pointer">
+          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+        </span>
+        <span onclick="window.open('https://github.com/fermint')" style="cursor: pointer">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
