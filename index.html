@@ -136,13 +136,18 @@
   Safari browsers seem to have an issue with that script */
   function includeHTML() {
     var z, i, elmnt, file, xhttp;
+    let chromeAgent = userAgentString.indexOf("Chrome") > -1;
+    let safariAgent = userAgentString.indexOf("Safari") > -1;
+    // Discard Safari since it also matches Chrome
+    if ((chromeAgent) && (safariAgent)) safariAgent = false;
     /* Loop through a collection of all HTML elements: */
     z = document.getElementsByTagName("*");
     for (i = 0; i < z.length; i++) {
       elmnt = z[i];
       /*search for elements with a certain atrribute:*/
       file = elmnt.getAttribute("include-html");
-      if (file) {
+      file_safari = elmnt.getAttribute("include-html-safari");
+      if (file || file_safari) {
         /* Make an HTTP request using the attribute value as the file name: */
         xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
@@ -150,11 +155,19 @@
             if (this.status == 200) {elmnt.innerHTML = this.responseText;}
             if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
             /* Remove the attribute, and call this function once more: */
-            elmnt.removeAttribute("include-html");
+            if (file){
+              elmnt.removeAttribute("include-html");
+            }else{
+              elmnt.removeAttribute("include-html-safari")
+            }
             includeHTML();
           }
         }
-        xhttp.open("GET", file, true);
+        if (file){
+          xhttp.open("GET", file, false);
+        }else{
+          xhttp.open("GET", file_safari, false);
+        }
         xhttp.send();
         /* Exit the function: */
         return;
@@ -191,7 +204,6 @@
       <div class="tab-content">
         <div class="tab-pane active" id="projects-selected">
             <div include-html="sections/projects_selected.html"></div>
-            <!-- <script>include("sections/projects_selected.html", document.currentScript);</script> -->
         </div>
         <!-- <div class="tab-pane" id="projects-all">
           <script>include("sections/projects_all.html", document.currentScript);</script>
@@ -212,16 +224,19 @@
     </ul>
     <div class="tab-content">
         <div class="tab-pane active" id="papers">
+          <div include-html-safari="publications/visions.html"></div>
           <script>
               include('publications/visions.html', document.currentScript);
           </script>
         </div>
         <div class="tab-pane" id="workshops">
+          <div include-html-safari="publications/benchmarking_svrhm.html"></div>
           <script>
               include('publications/benchmarking_svrhm.html', document.currentScript);
           </script>
         </div>
         <div class="tab-pane" id="posters">
+          <div include-html-safari="publications/benchmarking_san.html"></div>
           <script>
               include('publications/benchmarking_san.html', document.currentScript);
           </script>
