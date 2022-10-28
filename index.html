@@ -147,7 +147,8 @@
       /*search for elements with a certain atrribute:*/
       file = elmnt.getAttribute("include-html");
       // file_safari = elmnt.getAttribute("include-html-safari");
-      if (file || (safariAgent && file_safari)) {
+      // || (safariAgent && file_safari)
+      if (file) {
         /* Make an HTTP request using the attribute value as the file name: */
         xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
@@ -158,7 +159,7 @@
             if (file){
               elmnt.removeAttribute("include-html");
             }else{
-              elmnt.removeAttribute("include-html-safari")
+              elmnt.removeAttribute("include-html-safari");
             }
             includeHTML();
           }
