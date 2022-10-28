@@ -136,10 +136,10 @@
   Safari browsers seem to have an issue with that script */
   function includeHTML() {
     var z, i, elmnt, file, xhttp;
-    let chromeAgent = userAgentString.indexOf("Chrome") > -1;
-    let safariAgent = userAgentString.indexOf("Safari") > -1;
+    // let chromeAgent = userAgentString.indexOf("Chrome") > -1;
+    // let safariAgent = userAgentString.indexOf("Safari") > -1;
     // Discard Safari since it also matches Chrome
-    if ((chromeAgent) && (safariAgent)) safariAgent = false;
+    // if ((chromeAgent) && (safariAgent)) safariAgent = false;
     /* Loop through a collection of all HTML elements: */
     z = document.getElementsByTagName("*");
     for (i = 0; i < z.length; i++) {
