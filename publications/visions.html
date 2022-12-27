@@ -12,7 +12,7 @@
         
             <a class="button" href="/assets/publications/2022_visions/poster.png" target="_blank">poster</a>
         
-            <!-- <a class="button" href="javascript:unhide('talk_visions');slidesembed();" id="btn_talk_visions">talk</a> -->
+            <a class="button" href="javascript:unhide('talk_visions');slidesembed();" id="btn_talk_visions">talk</a>
         
             <a class="button" href="https://github.com/FerminT/VisualSearchBenchmark/tree/NeurIPS" target="_blank">code</a>
         
@@ -26,9 +26,11 @@
             function slidesembed(){
                 if (typeof embed_visions === "undefined"){
                     embed_visions = new SlidesLiveEmbed("talk_visions", {
-                        presentationId: 38959168,
+                        presentationId: 38992559,
                         autoPlay: false, // change to true to autoplay the embedded presentation
-                        verticalEnabled: true
+                        allowHiddenControlsWhenPaused: true,
+                        verticalEnabled: true,
+                        hideTitle: true
                     });
                 }
             }
