@@ -130,7 +130,7 @@
       item.className=(item.className=='hidden')?'unhidden':'hidden';
     }
   }
-  /* This function, from W3Schools, serves as an alternative to that one in includes.js
+  /* This function, from W3Schools, serves as an alternative to the one in includes.js
   Safari browsers seem to have an issue with that script */
   function includeHTML() {
     var z, i, elmnt, file, xhttp;
@@ -275,6 +275,16 @@
 </div>
 <script>
   includeHTML();
+  if (window.localStorage)
+  {
+    if (!localStorage.getItem('firstLoad'))
+    {
+      localStorage['firstLoad'] = true;
+      window.location.reload();
+    }  
+    else
+      localStorage.removeItem('firstLoad');
+  }
 </script> 
 </body>
 </html>
