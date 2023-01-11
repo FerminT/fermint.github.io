@@ -280,6 +280,7 @@
     if (!localStorage.getItem('firstLoad'))
     {
       localStorage['firstLoad'] = true;
+      window.location = window.location + '/index.html';
       window.location.reload();
     }  
     else
