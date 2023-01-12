@@ -275,6 +275,9 @@
 </div>
 <script>
   includeHTML();
-</script> 
+  if (!window.location.href.includes("index.html")) {
+    window.location.replace("https://fermint.github.io/index.html")
+  }
+</script>
 </body>
 </html>
